@@ -1,0 +1,202 @@
+  body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Container for centering content */
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+            background-image: url('https://www.transparenttextures.com/patterns/pw-maze-white.png');
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Title Styling */
+        h2 {
+            font-size: 36px;
+            color: #ff73a1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: 'Dancing Script', cursive;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h2::after {
+            content: "🌺"; /* Flower emoji */
+            position: absolute;
+            right: -30px;
+            top: 0;
+            font-size: 50px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        /* Section titles with Flower Emojis */
+        h3 {
+            font-size: 28px;
+            color: #ff5c8f;
+            font-family: 'Dancing Script', cursive;
+            margin: 25px 0;
+            text-decoration: underline;
+            position: relative;
+        }
+
+        h3::before {
+            content: "🌺"; /* Flower emoji */
+            position: absolute;
+            left: -30px;
+            top: -5px;
+            font-size: 40px;
+            animation: spin 3s infinite linear;
+        }
+
+        /* City list */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 18px;
+            color: #d86b8c;
+        }
+
+        li {
+            background-color: #ffe6f0;
+            margin: 12px 0;
+            padding: 12px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            position: relative;
+            animation: fadeInItem 1s ease-out;
+        }
+
+        li::before {
+            content: "🌺"; /* Flower emoji */
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+        }
+
+        li:hover {
+            background-color: #ffebf5;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+
+        li:hover::before {
+            content: "🌺"; /* Different flower emoji on hover */
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        /* Separator and description */
+        .separator {
+            color: #8c4967;
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInItem {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 30px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            li {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            li {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+        }
